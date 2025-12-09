@@ -10,8 +10,8 @@ void sortAscBubble(int a[], int n);
 void sortDescBubble(int a[], int n);
 int findPosFirstFoundLeft(int a[], int n, int x);
 int main() {
-	int sel,n=8,kw;
-	int arr[]={7,2,5,9,6,4,2,8};
+	int sel,n=10,kw;
+	int arr[]={7,22,51,9,6,4,23,8,17,19};
 //	printf("Input number of elements: ");	
 //	scanf("%d", &n);
 //	int arr[n];
