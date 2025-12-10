@@ -126,3 +126,28 @@ int findPosMaxTheK(int a[], int n, int k){
 	}
 	return pos;
 }
+
+int findPosMinTheK(int a[], int n, int k){
+	int i, pos=-1, count=0, min;
+	if (k<=0 || k>n) return pos;
+	min=findMin(a,n);
+	for (i=0; i<n; i++){
+		if (a[i]==min){
+			count++;
+			if (count==k){
+				pos=i;
+				break;
+			}
+		}
+	}
+	return pos;
+}
+
+void sortInRangeAsc(int a[], int n, int pos1, int pos2){
+	int i,j;
+	for (i=pos1; i<pos2; i++)
+		for (j=pos2; j>i; j--)
+			if (a[j-1]>a[j]){
+				int tg=a[j]; a[j]=a[j-1]; a[j-1]=tg;
+			}
+}
